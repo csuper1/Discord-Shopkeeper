@@ -22,6 +22,9 @@ public class Program
 			});
 		commands = new CommandService();
 
+		// This is my token for getting the bot to run, however, since it's up on a public
+		// repository, I shoved it off to another cs file where I can pull from it and keep
+		// it hidden.
 		string token = new ShopKeeper.DiscordKey().token;
 
 		services = new ServiceCollection()

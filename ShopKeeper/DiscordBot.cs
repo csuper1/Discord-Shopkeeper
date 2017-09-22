@@ -17,26 +17,18 @@ namespace ShopKeeper
 		// Recreate item list if we have on already
 		private static ItemStock items = initializeItemStock();
 		private static readonly string currencyName = "gold pieces";
-		private static readonly string[] greetings = {	"Hello!",
-														"It's so nice to see you again.",
-														"I'm happy that you came to me!",
-														"It's always a wonderful day to shop!",
-														"Zzz... Huh, what? No, I wasn't sleeping!",
-														"Aah! You scared me."};
+
+		private static readonly string[] greetings = {	"Hello!", "It's so nice to see you again.",
+			"I'm happy that you came to me!", "It's always a wonderful day to shop!",
+			"Zzz... Huh, what? No, I wasn't sleeping!", "Aah! You scared me."};
 
 		private static readonly string[] questions = {	"How can I help you today? Is there anything you'd like?",
-														"Please, enjoy the store. Let me know if you want anything!",
-														"Is there anything I can help you find today?",
-														"I'm happy to help if you find what you're looking for!",
-														"Here's what I've got in store for you today. Let me know if something catches your eye!"};
+			"Please, enjoy the store. Let me know if you want anything!", "Is there anything I can help you find today?",
+			"I'm happy to help if you find what you're looking for!",
+			"Here's what I've got in store for you today. Let me know if something catches your eye!" };
 
-		private static readonly string[] rumors = {	"Rumor Placehodler 1.",
-													"Rumor Placeholder 2.",
-													"Rumor Placeholder 3.",
-													"Rumor Placeholder 4.",
-													"Rumor Placeholder 5."};
-
-		
+		private static readonly string[] rumors = {	"Rumor Placehodler 1.", "Rumor Placeholder 2.",
+			"Rumor Placeholder 3.", "Rumor Placeholder 4.", "Rumor Placeholder 5."};
 
 		[Command ("hello")]
 		[Summary ("say hello!")]
@@ -64,11 +56,13 @@ namespace ShopKeeper
 		[Summary ("Add an item to the shop. Takes [name stock price]")]
 		public async Task addItem(string name, int stock, int price)
 		{
-			if (name.Length > 10) {
+			if (name.Length > 10)
+			{
 				await ReplyAsync("Name cannot be longer than 10 characters");
 				return;
 			}
-			if (price > 99999) {
+			if (price > 99999)
+			{
 				await ReplyAsync("Price cannot exceed 5 digits");
 				return;
 			}

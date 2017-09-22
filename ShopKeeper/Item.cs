@@ -8,7 +8,6 @@ namespace ShopKeeper
 {
 	class Item
 	{
-
 		[JsonProperty("name")]
 		public string name { get; set; }
 
