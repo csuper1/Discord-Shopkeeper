@@ -1,2 +1,1 @@
 # Discord-Shopkeeper
-# Discord-Shopkeeper
